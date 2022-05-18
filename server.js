@@ -40,7 +40,11 @@ app.use(express.json());
 
 // ******************* database *****************************
 
-mongoose.connect("mongodb://localhost:27017/MPSERVICES");
+let uri = process.env.MONGOLAB_URI || 27017;
+
+let url = "mongodb://localhost:" + uri + "/MPSERVICES"
+
+mongoose.connect(url);
 
 const membersSchema = new mongoose.Schema({
     name: String,
