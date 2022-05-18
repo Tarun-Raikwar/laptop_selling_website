@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+/* ****************************** navbar *************************** */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: rgb(44, 42, 42);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    padding: 5px 5px;
+    z-index: 1;
+}
+#navbar img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+}
+#navbar ul{
+    display: flex;
+    align-items: center;
+}
+#navbar ul li a{
+    color: white;
+    text-decoration: none;
+}
+#navbar ul li{
+    list-style: none;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#dropdown{
+    display: none;
+}
+#input{
+    display: none;
+}
+#input input{
+    border: none;
+    height: 30px;
+    width: 150px;
+    border-radius: 5px; 
+}
+#input button{
+    margin-left: 5px;
+    border: none;
+    height: 30px;
+    width: 45px;
+    border-radius: 5px; 
+}
+#input button:hover{  
+    border-radius: 5px; 
+    background-color: rgb(94, 92, 92);
+    color: white;
+}
+#navbar ul li a:hover{
+    font-size: 1.1rem;
+}
+@media screen and (max-width: 846px){
+    #navbar ul{
+        display: none;
+    }
+    #input{
+        display: flex;
+    }
+    #dropdown{
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+}
+
+/* **************************** sidebar ******************************** */
+#sidebar{
+    text-align: center;
+    background-color: black;
+    display: none;
+    z-index: 2;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+#sidebar ul li{
+    list-style: none;
+    padding: 10px 0px;
+}
+#sidebar ul li a{
+    text-decoration: none;
+    color: white;
+}
+#sidebar ul li:hover{
+    background-color: rgb(236, 106, 20);
+}
+
+/* ************************** sidebar end ************************ */
+
+
+/* ************************ form *********************** */
+
+#login_form{
+    /* border: 2px solid green; */
+    /* padding: 54px 0px;
+    background: linear-gradient(90deg, rgb(73, 73, 73), rgb(122, 120, 120)); */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/262/774/423/space-stars-nebula-tylercreatesworlds-wallpaper-preview.jpg');
+    /* background: linear-gradient(120deg, rgb(63, 2, 60), rgb(88, 209, 84)); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.glass {
+    /* box-shadow: 10px 10px 100px rgb(156, 155, 155); */
+    width: 50vw;
+    margin: auto;
+    /* background: linear-gradient(0deg, rgba(231, 229, 229, 0.3), rgba(255, 255, 255, 0.2)); */
+    /* opacity: 0.7; */
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+    /* z-index: 1; */
+    display: flex;
+    align-items: center;
+    padding: 50px 0px;
+    box-shadow: 10px 10px 50px 10px black;
+}
+
+form{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: auto;
+}
+
+form p{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    /* color: blueviolet; */
+    /* font-weight: 600; */
+    color: white;
+}
+form input{
+    width: 30vw;
+    height: 40px;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    border-bottom: 2px solid white;
+    color: white;
+}
+form input::placeholder{
+    color: white;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+form span{
+    /* border: 2px solid white; */
+    color: red;
+}
+
+form button{
+    width: 20vw;
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    /* border: 1px solid black; */
+}
+form button:hover{
+    background-color: rgb(45, 235, 102);
+    color: white;
+    cursor: pointer;
+    /* border: 1px solid white; */
+}

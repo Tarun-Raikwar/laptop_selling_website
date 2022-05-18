@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <img src="https://thumbs.dreamstime.com/b/mp-logo-letter-monogram-slash-modern-designs-template-black-color-white-background-164907808.jpg"
+            alt="Error">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="contact">Contact Us</a></li>
+            <li><a href="/">About us</a></li>
+        </ul>
+        <div id="input">
+            <input type="search" placeholder="" name="search" class="search">
+            <a href="/search" class="search_submit"><button type="button"><img
+                src="https://cdn1.iconfinder.com/data/icons/web-and-mobile-ui-outline-icon-kit/512/UI_Icons_2-01-512.png"
+                alt=""></button></a>
+        </div>
+        <ul>
+            <li class="account">Login</li>
+            <li class="user">
+                <img src="https://www.tenforums.com/geek/gars/images/2/types/thumb_15951118880user.png" alt="">
+            </li>
+            <li class="logout"><a href="/logout">Logout</a></li>
+            <li class="signup"><a href="/signup">Signup</a></li>
+        </ul>
+        <div id="dropdown">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+    </nav>
+    <!-- ***************************** nav bar *************************** -->
+    
+    <div id="results">
+        <p><strong></strong> result for <span></span></p>
+    </div>
+
+    <div id="container">
+        <!-- <div class="item">
+            <img src="/images/1/1.jpg" alt="Error">
+            <div class="details">
+                <p class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eligendi ratione, quos ducimus pariatur excepturi fuga eos libero dolor tempore quisquam, iure impedit consequuntur nostrum doloribus consectetur perferendis, id maxime?</p>
+                <p class="price"><strong>Price : </strong><span>&#8377</span>75000</p>
+                <p class="offer">Free delivery</p>
+            </div>
+        </div> -->
+    </div>
+
+
+
+    <!-- ************************************ login ******************************* -->
+    <div id="login_form_container">
+    </div>
+    <form action="/login" method="post" id="login_form">
+        <h1>Sign in</h1>
+        <div>
+            <label for="user_id">Email address</label>
+            <input type="text" id="user_id" name="user_id" placeholder="abc@gmail.com">
+        </div>
+        <div>
+            <label for="pass">Password</label>
+            <input type="number" id="pass" name="password" autocomplete="off" placeholder="Password">
+        </div>
+        <button type="submit">Submit</button>
+        <a href="/signup">Create account</a>
+    </form>
+
+
+    <!-- ***************************** sidebar ******************************* -->
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="contact">Contact Us</a></li>
+            <li><a href="/">About us</a></li>
+        </ul>
+        <ul>
+            <li class="account">Login</li>
+            <li class="user">
+                <img src="https://www.tenforums.com/geek/gars/images/2/types/thumb_15951118880user.png" alt="">
+            </li>
+            <li class="logout"><a href="/logout">Logout</a></li>
+            <li class="signup"><a href="/signup">Signup</a></li>
+        </ul>
+    </div>
+
+</body>
+<script src="js/search.js"></script>
+</html>

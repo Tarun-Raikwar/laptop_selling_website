@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <img src="https://thumbs.dreamstime.com/b/mp-logo-letter-monogram-slash-modern-designs-template-black-color-white-background-164907808.jpg"
+            alt="Error">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="contact">Contact Us</a></li>
+            <li><a href="/">About us</a></li>
+        </ul>
+        <div id="input">
+            <input type="search" placeholder="" name="search" class="search">
+            <a href="/search" class="search_submit"><button type="button"><img
+                src="https://cdn1.iconfinder.com/data/icons/web-and-mobile-ui-outline-icon-kit/512/UI_Icons_2-01-512.png"
+                alt=""></button></a>
+        </div>
+        <ul>
+            <li class="account">Login</li>
+            <li class="user">
+                <img src="https://www.tenforums.com/geek/gars/images/2/types/thumb_15951118880user.png" alt="">
+            </li>
+            <li class="logout"><a href="/logout">Logout</a></li>
+            <li class="signup"><a href="/signup">Signup</a></li>
+        </ul>
+        <div id="dropdown">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+    </nav>
+    
+
+    <div id="product">
+        <div id="container">
+            <div id="left">
+                <img src="https://p.kindpng.com/picc/s/287-2874440_go-arrow-next-svg-clip-arts-button-left.png" alt="">
+            </div>
+            <div id="slider">
+                <!-- <img src="images/1/1.jpg" alt=""> -->
+            </div>
+            <div id="right">
+                <img src="https://p.kindpng.com/picc/s/287-2874440_go-arrow-next-svg-clip-arts-button-left.png" alt="">
+            </div>
+        </div>
+        <div id="content">
+            <p id="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quaerat porro in consequatur
+                nemo eligendi, voluptatibus consequuntur quis laboriosam officiis sed architecto neque nisi atque qui
+                maxime fugit quia distinctio?</p>
+            <p id="price_block"><strong>price: </strong> <span id="price"><span>&#8377</span></span></p>
+            <table>
+                <tr>
+                    <td><strong>series : </strong></td>
+                    <td id="series"></td>
+                </tr>
+                <tr>
+                    <td><strong>brand : </strong></td>
+                    <td id="brand"></td>
+                </tr>
+                <tr>
+                    <td><strong>cpu manufacture : </strong></td>
+                    <td id="cpu"></td>
+                </tr>
+                <tr>
+                    <td><strong>color : </strong></td>
+                    <td id="color"></td>
+                </tr>
+                <tr>
+                    <td><strong>graphic card : </strong></td>
+                    <td id="graphic_card"></td>
+                </tr>
+            </table>
+            <button id="buy">
+                <a href="/buy_now">Buy Now</a>
+            </button>
+        </div>
+    </div>
+
+    <!-- ***************************** footer ******************************* -->
+    <footer>
+        <div class="find">
+            <div class="component" id="location">
+                <img src="https://media.istockphoto.com/vectors/location-icons-map-pointer-icon-map-navigation-location-red-location-vector-id1182752907?k=20&m=1182752907&s=170667a&w=0&h=EfHC35WQ6XUDbkHKNA9pggN5UP8FRQ_czvG7J6B6oOY="
+                    alt="">
+                <p>Azad Hind Fauj Marg, Dwarka Sector-3, Dwarka, New Delhi, Delhi 110078</p>
+            </div>
+            <div class="component" id="contact_no">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTknhKt1tF2mNuMXFoLr2g6aWUB3yrwNWRg&usqp=CAU">
+                <p>+91 8989898946</p>
+            </div>
+            <div class="component" id="email_id">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVDpsAVqo15QvfmFS_75YT1QIq8tJBkm2mJw&usqp=CAU"
+                    alt="">
+                <p>nsutdelhi@nsut.ac.in</p>
+            </div>
+        </div>
+        <p id="copy">&copy; All right reserved to Netaji Shubhas Sports Authority</p>
+    </footer>
+    <!-- ***************************** footer ******************************* -->
+
+
+    <!-- ************************************ login ******************************* -->
+    <div id="login_form_container">
+    </div>
+    <form action="/login" method="post" id="login_form">
+        <h1>Sign in</h1>
+        <div>
+            <label for="user_id">Email address</label>
+            <input type="text" id="user_id" name="user_id" placeholder="abc@gmail.com">
+        </div>
+        <div>
+            <label for="pass" minlength="8">Password</label>
+            <input type="number" id="pass" name="password" autocomplete="off" placeholder="Password">
+        </div>
+        <button type="submit">Submit</button>
+        <a href="/signup">Create account</a>
+    </form>
+
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="contact">Contact Us</a></li>
+            <li><a href="/">About us</a></li>
+        </ul>
+        <ul>
+            <li class="account">Login</li>
+            <li class="user">
+                <img src="https://www.tenforums.com/geek/gars/images/2/types/thumb_15951118880user.png" alt="">
+            </li>
+            <li class="logout"><a href="/logout">Logout</a></li>
+            <li class="signup"><a href="/signup">Signup</a></li>
+        </ul>
+    </div>
+</body>
+<script src="js/product.js"></script>
+
+</html>

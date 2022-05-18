@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Admin.css">
+</head>
+
+<body>
+
+
+    <!-- ***************************** navbar start ************************** -->
+    <nav>
+        <img src="https://thumbs.dreamstime.com/b/mp-logo-letter-monogram-slash-modern-designs-template-black-color-white-background-164907808.jpg"
+            alt="Error">
+        <ul>
+            <li><a href="/Admin">Add items</a></li>
+            <li><a href="/customer_query">customer Queries</a></li>
+        </ul>
+    </nav>
+    <!-- ************************************* navbar end ******************************* -->
+
+    <div id="submited">
+        <p>Product Succesfully added</p>
+    </div>
+
+
+    <!-- ************************************* Add item ************************************* -->
+    <form action="/upload_product" method="post" onsubmit="return validation()" enctype="multipart/form-data">
+        <p>Add Product To Database</p>
+        <!-- <div class="images">
+            <input type="file" name="image" class="input" placeholder="Enter Front image">
+            <input type="file" name="image" class="input" placeholder="Enter another image">
+            <input type="file" name="image" class="input" placeholder="Enter another image">
+            <input type="file" name="image" class="input" placeholder="Enter another image">
+        </div> -->
+        <label for="file1">Enter link of the image folder</label>
+        <input type="file" name="file1" id="file1">
+        <span id="file1_span"></span>
+
+        <label for="file2">Enter link of the image folder</label>
+        <input type="file" name="file2" multiple id="file2">
+        <span id="file2_span"></span>
+        <!-- <span id="add">Add image</span> -->
+
+        <label for="length">Enter number of images</label>
+        <input type="number" name="length" id="length">
+        <span id="length_span"></span>
+
+        <label for="overview" maxlength="100">Enter overview</label>
+        <input type="text" name="overview" id="overview">
+        <span id="overview_span"></span>
+
+        <label for="detail">Enter detail about product</label>
+        <input type="text" name="detail" id="detail">
+        <span id="detail_span"></span>
+
+        <label for="price">Enter your price</label>
+        <input type="text" name="price" id="price">
+        <span id="price_span"></span>
+
+        <label for="series">Enter series</label>
+        <input type="text" name="series" id="series">
+        <span id="series_span"></span>
+
+        <label for="brand">Enter Brand name</label>
+        <input type="text" name="brand" id="brand">
+        <span id="brand_span"></span>
+
+        <label for="cpu">Enter CPU manufacture</label>
+        <input type="text" name="cpu_manufacture" id="cpu">
+        <span id="cpu_span"></span>
+
+        <label for="color">Eneter color</label>
+        <input type="text" name="color" id="color">
+        <span id="color_span"></span>
+
+        <label for="about">Enetr about item</label>
+        <input type="text" name="about" id="about">
+        <span id="about_span"></span>
+
+        <div class="graphic">
+            <label for="graphic_card">Graphic card</label>
+            <select id="graphic_card" name="graphic_card">
+                <option value="intigirated">intigirated</option>
+                <option value="not intigirated">not intigirated</option>
+            </select>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+</body>
+<script src="js/Admin.js"></script>
+
+</html>
