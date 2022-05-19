@@ -40,9 +40,10 @@ app.use(express.json());
 
 // ******************* database *****************************
 
+let db = "mongodb+srv://tarun:T@run22022003@cluster0.08xkp.mongodb.net/?retryWrites=true&w=majority";
 
 
-mongoose.connect("mongodb+srv://cluster0.0vc8e.mongodb.net/myFirstDatabase");
+mongoose.connect(db);
 
 const membersSchema = new mongoose.Schema({
     name: String,
