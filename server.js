@@ -43,7 +43,11 @@ app.use(express.json());
 let db = "mongodb+srv://tarun:T@run22022003@cluster0.08xkp.mongodb.net/?retryWrites=true&w=majority";
 
 
-mongoose.connect(db);
+mongoose.connect(db).then(()=>{
+    console.log("connection successfull");
+}).catch((err) =>{
+    console.log(err);
+});
 
 const membersSchema = new mongoose.Schema({
     name: String,
