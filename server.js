@@ -40,11 +40,9 @@ app.use(express.json());
 
 // ******************* database *****************************
 
-let uri = process.env.MONGOLAB_URI || 27017;
 
-let url = "mongodb://localhost:" + uri + "/MPSERVICES"
 
-mongoose.connect(url);
+mongoose.connect("mongodb+srv://cluster0.0vc8e.mongodb.net/myFirstDatabase");
 
 const membersSchema = new mongoose.Schema({
     name: String,
