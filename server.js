@@ -40,7 +40,7 @@ app.use(express.json());
 
 // ******************* database *****************************
 
-let db = "mongodb+srv://tarun:T@run22022003@cluster0.08xkp.mongodb.net/?retryWrites=true&w=majority";
+let db = "mongodb+srv://tarun:tarunkumar@cluster0.55ykm.mongodb.net/?retryWrites=true&w=majority";
 
 
 mongoose.connect(db).then(()=>{
