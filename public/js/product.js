@@ -87,13 +87,6 @@ fetch("/product_data")
         graphicCard.innerHTML = data.graphic_card;
         color.innerHTML = data.color;
 
-        let image_container = document.getElementsByClassName('image');
-        let image = document.querySelectorAll(".image img");
-
-        for(let i=0; i<image.length; i++){
-            image_container.style.height = "" + image.clientHeight + "px";
-         }
-
 
     })
 

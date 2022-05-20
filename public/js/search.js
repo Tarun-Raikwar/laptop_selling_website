@@ -51,7 +51,16 @@ fetch("/search_product")
                 let container = document.getElementById("container");
 
                 for(let i=0; i<product.length; i++){
-                    container.innerHTML += '<a href="/product"><div class="item"><img src=' + '"http://drive.google.com/uc?export=view&id='+ data[i].link[0] +'" alt="Error"><div class="details"><p class="about">' + product[i].detail.substring(0, 400) + "..." + '</p><p class="price"><strong>Price : </strong><span>&#8377</span>' + product[i].price + '</p><p class="offer">Free delivery</p></div></div></a>';
+                    let product_detail;
+                    if(window.innerWidth < 588){
+                        product_detail = product[i].detail;
+                        product_detail = product_detail.substring(0,100);
+                    }
+                    else{
+                        product_detail = product[i].detail;
+                       product_detail = product_detail.substring(0, 200);
+                    }
+                    container.innerHTML += '<a href="/product"><div class="item"><div class="image"><img src=' + '"http://drive.google.com/uc?export=view&id='+ product[i].link[0] +'" alt="Error"></div><div class="details"><p class="about">' + product_detail + "..." + '</p><p class="price_container"><strong>Price : </strong><span>&#8377</span><span class="price">' + product[i].price + '</span></p><p class="offer">Free delivery</p></div></div></a>';
                 }
 
                 let item = document.getElementsByClassName('item');
