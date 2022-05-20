@@ -314,9 +314,23 @@ app.post('/upload_product', multipleUpload, async function (req, res) {
     var link_array = new Array;
 
     let temp = await upload_drive("file10", "./public/upload/file10" + ".jpg");
+    await drive.permissions.create({
+        fileId: temp,
+        requestBody: {
+            role: "reader",
+            type: "anyone"
+        }
+    })
     link_array.push(temp);
     for(let i=1; i<req.body.length; i++){
         temp = await upload_drive("file2"+i, "./public/upload/file2" + i + ".jpg");
+        await drive.permissions.create({
+            fileId: temp,
+            requestBody: {
+                role: "reader",
+                type: "anyone"
+            }
+        })
         link_array.push(temp)
     }
     const laptop = new laptops({
