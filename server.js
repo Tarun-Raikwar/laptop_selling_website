@@ -56,7 +56,7 @@ const membersSchema = new mongoose.Schema({
     pass: String
 });
 
-const members = mongoose.model("members", membersSchema);
+const members = mongoose.model("MEMBER", membersSchema);
 
 
 const laptop_schema = new mongoose.Schema({
@@ -73,7 +73,7 @@ const laptop_schema = new mongoose.Schema({
     graphic_card: String
 })
 
-const laptops = mongoose.model("laptops", laptop_schema);
+const laptops = mongoose.model("LAPTOP", laptop_schema);
 
 const qeury_schema = new mongoose.Schema({
     date: String,
@@ -84,7 +84,7 @@ const qeury_schema = new mongoose.Schema({
     message: String
 })
 
-const queries = mongoose.model("queries", qeury_schema);
+const queries = mongoose.model("QUERIE", qeury_schema);
 
 // ******************* database end *************************
 
