@@ -37,7 +37,7 @@ fetch("/product_data")
 })
 .then(function (data) {
     
-    slider.innerHTML = '<img src=' + '"http://drive.google.com/uc?export=view&id='+ data.link[i] +'" alt="Error">'
+    slider.innerHTML = '<div class="image"><img src=' + '"http://drive.google.com/uc?export=view&id='+ data.link[i] +'" alt="Error"></div>';
     slider.style.height = "" + slider.clientWidth + "px";
     console.log(slider.clientHeight);
     
@@ -55,7 +55,7 @@ fetch("/product_data")
             else{
                 i--;
             }
-            slider.innerHTML = '<img src=' + '"http://drive.google.com/uc?export=view&id='+ data.link[i] +'" alt="Error">'
+            slider.innerHTML = '<div class="image"><img src=' + '"http://drive.google.com/uc?export=view&id='+ data.link[i] +'" alt="Error"></div>';
         })
 
         right.addEventListener('click', () => {
@@ -65,7 +65,7 @@ fetch("/product_data")
             else{
                 i++;
             }
-            slider.innerHTML = '<img src=' + '"http://drive.google.com/uc?export=view&id='+ data.link[i] +'" alt="Error">'
+            slider.innerHTML = '<div class="image"><img src=' + '"http://drive.google.com/uc?export=view&id='+ data.link[i] +'" alt="Error"></div>';
         })
 
 
@@ -87,6 +87,13 @@ fetch("/product_data")
         graphicCard.innerHTML = data.graphic_card;
         color.innerHTML = data.color;
 
+        let image_container = document.getElementsByClassName('image');
+        let image = document.querySelectorAll(".image img");
+
+        for(let i=0; i<image.length; i++){
+            image_container.style.height = "" + image.clientHeight + "px";
+         }
+
 
     })
 
@@ -107,6 +114,7 @@ for(let i=0; i<login_button.length; i++){
         // login_form.style.top = "-3200px";
         login_form.style.display = "flex";
         login_form_container.style.display = "block";
+        sidebar.style.display == "none";
     })
 }
 

@@ -117,6 +117,7 @@ for(let i=0; i<login_button.length; i++){
         // login_form.style.top = "-3200px";
         login_form.style.display = "flex";
         login_form_container.style.display = "block";
+        sidebar.style.display = "none";
     })
 }
 

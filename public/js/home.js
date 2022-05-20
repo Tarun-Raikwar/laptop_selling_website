@@ -81,7 +81,7 @@ fetch('/laptop')
             // console.log(data[i]);
             let overview = data[i].detail.substring(0, 30);
             overview += "...";
-            sliding_bar[0].innerHTML += '<a href="/product"><div class="item"><img src=' + '"http://drive.google.com/uc?export=view&id='+ data[i].link[0] +'" alt="Error"><p class="info">' + overview + '</p><p class="price"><strong>PRICE</strong>: <span>&#8377</span>' + data[i].price + '</p></div></a>';
+            sliding_bar[0].innerHTML += '<a href="/product"><div class="item"><div class="image"><img src=' + '"http://drive.google.com/uc?export=view&id='+ data[i].link[0] +'" alt="Error"></div><p class="info">' + overview + '</p><p class="price"><strong>PRICE</strong>: <span>&#8377</span>' + data[i].price + '</p></div></a>';
         }
 
         for (let i = 0; i < item.length; i++) {
@@ -132,6 +132,7 @@ for(let i=0; i<login_button.length; i++){
         // login_form.style.top = "-3200px";
         login_form.style.display = "flex";
         login_form_container.style.display = "block";
+        sidebar.style.display = "none";
     })
 }
 

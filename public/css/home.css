@@ -19,14 +19,14 @@ body {
     top: 0px;
     left: 0px;
     align-items: center;
-    padding: 0px 10px;
+    padding: 4px 10px;
     /* padding: 5px 5px; */
     box-shadow: 0px 2px 20px 2px rgb(212, 210, 210);
 }
 
 #navbar img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 100px;
 }
 
@@ -406,7 +406,17 @@ body {
     cursor: pointer;
 }
 
-.item img {
+.image{
+    height: 200px;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.image img {
+    /* border: 2px solid blue; */
     width: 100%;
 }
 
@@ -429,6 +439,9 @@ body {
     }
     .sliding_bar a{
         width: 160px;
+    }
+    .image{
+        height: 152px;
     }
 }
 
