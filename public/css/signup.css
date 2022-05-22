@@ -111,10 +111,6 @@
 /* ************************ form *********************** */
 
 #login_form{
-    /* border: 2px solid green; */
-    /* padding: 54px 0px;
-    background: linear-gradient(90deg, rgb(73, 73, 73), rgb(122, 120, 120)); */
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,7 +118,6 @@
     /* background: linear-gradient(120deg, rgb(63, 2, 60), rgb(88, 209, 84)); */
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
 }
 
 .glass {
