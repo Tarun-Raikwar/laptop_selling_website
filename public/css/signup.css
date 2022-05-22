@@ -138,15 +138,25 @@
     align-items: center;
     padding: 50px 0px;
     box-shadow: 10px 10px 50px 10px black;
+    /* border: 2px solid red; */
 }
+
+
+@media screen and (max-width: 612px) and (min-width: 400px) {
+    .glass{
+        width: 80vw;
+    }
+}
+
 
 form{
     /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
     margin: auto;
+    /* width: 60%; */
+    justify-content: center;
+    align-items: center;
 }
 
 form p{
@@ -157,7 +167,7 @@ form p{
     color: white;
 }
 form input{
-    width: 30vw;
+    width: 100%;
     height: 40px;
     margin: 10px 0px;
     padding: 5px 10px;
@@ -197,4 +207,18 @@ form button:hover{
     color: white;
     cursor: pointer;
     /* border: 1px solid white; */
+}
+
+
+@media screen and (max-width: 399px) {
+    form p{
+        font-size: 1.3rem;
+        color: #eb8d84;
+    }
+    .glass{
+        width: 80vw;
+    }
+    form input{
+        width: 80%;
+    }
 }
