@@ -179,7 +179,7 @@ body {
 #product{
     /* border: 2px solid green; */
     display: flex;
-    padding: 50px 50px;
+    padding: 30px 0px;
     justify-content: space-around;
     /* align-items: center; */
     flex-wrap: wrap;
@@ -193,6 +193,7 @@ body {
 #left, #right{
     position: relative;
     /* z-index: -1; */
+    height: 50px;
 }
 
 #left img{
@@ -255,12 +256,16 @@ body {
 #content{
     /* border: 2px solid red; */
     width: 40vw;
+    padding: 20px 10px;
 }
 
-@media screen and (max-width: 1180px){
+@media screen and (max-width: 1180px) and (min-width: 419px){
     #content{
-        width: 90vw;
+        width: 80%;
+        margin: auto;
         margin-top: 20px;
+        background-color: white;
+        width: 95vw;
     }
 }
 
@@ -274,13 +279,26 @@ body {
 #detail{
     font-size: 1.2rem;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    #detail{
+        font-size: 1rem;
+    }
 }
 
 #price_block{
-    font-size: 1.2rem;
-    color: red;
+    width: 100%;
     margin-bottom: 50px;
 }
+
+#price{
+    color: blue;
+    font-size: 1.5rem;
+}
+
+
 
 td{
     padding: 5px 5px;
@@ -295,6 +313,7 @@ td{
     border-radius: 4px;
     font-size: 1.1rem;
     margin-top: 30px;
+    /* margin-left: calc(100%/2 - 100px); */
 }
 
 #buy a{
@@ -304,6 +323,18 @@ td{
 
 #buy:hover{
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 418px) {
+    #content{
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px 10px;
+        background-color: white;
+        width: 95vw;
+    }
+
 }
 
 
