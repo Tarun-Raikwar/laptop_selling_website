@@ -110,31 +110,25 @@
 
 /* ************************ form *********************** */
 
-#login_form{
+body{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     background-image: url('https://c4.wallpaperflare.com/wallpaper/262/774/423/space-stars-nebula-tylercreatesworlds-wallpaper-preview.jpg');
-    /* background: linear-gradient(120deg, rgb(63, 2, 60), rgb(88, 209, 84)); */
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+
 }
 
 .glass {
-    /* box-shadow: 10px 10px 100px rgb(156, 155, 155); */
+    margin-top: 50px;
     width: 50vw;
-    margin: auto;
-    /* background: linear-gradient(0deg, rgba(231, 229, 229, 0.3), rgba(255, 255, 255, 0.2)); */
-    /* opacity: 0.7; */
     backdrop-filter: blur(10px);
     border-radius: 4px;
-    /* z-index: 1; */
     display: flex;
     align-items: center;
     padding: 50px 0px;
     box-shadow: 10px 10px 50px 10px black;
-    /* border: 2px solid red; */
 }
 
 

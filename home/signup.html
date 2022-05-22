@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/signup.css">
 </head>
+
 <body>
     <!-- <nav id="navbar">
         <img src="https://thumbs.dreamstime.com/b/mp-logo-letter-monogram-slash-modern-designs-template-black-color-white-background-164907808.jpg" alt="Error">
@@ -38,24 +40,23 @@
             <li id="cart"><a href="/" >cart</a></li>
         </ul>
     </div> -->
-    <div id="login_form">
-        <div class="glass">
-            <form action="/signup_data" onsubmit="return validation()" method="post">
-                <p>Create your account</p>
-                <input type="text" name="name_cust" id="name_cust" placeholder="Name">
-                <span id="name_span"></span>
-                <input type="number" name="Phone_number" id="ph" placeholder="Phone number">
-                <span id="ph_span"></span>
-                <input type="email" name="Email" id="email" placeholder="Email">
-                <span id="email_span"></span>
-                <input type="password" name="password" id="pass" placeholder="Create Password">
-                <span id="pass_span"></span>
-                <input type="password" name="confirm_pass" id="confirm_pass" placeholder="Confirm password">
-                <span id="confirm_pass_span"></span>
-                <button type="submit">submit</button>
-            </form>
-        </div>
+    <div class="glass">
+        <form action="/signup_data" onsubmit="return validation()" method="post">
+            <p>Create your account</p>
+            <input type="text" name="name_cust" id="name_cust" placeholder="Name">
+            <span id="name_span"></span>
+            <input type="number" name="Phone_number" id="ph" placeholder="Phone number">
+            <span id="ph_span"></span>
+            <input type="email" name="Email" id="email" placeholder="Email">
+            <span id="email_span"></span>
+            <input type="password" name="password" id="pass" placeholder="Create Password">
+            <span id="pass_span"></span>
+            <input type="password" name="confirm_pass" id="confirm_pass" placeholder="Confirm password">
+            <span id="confirm_pass_span"></span>
+            <button type="submit">submit</button>
+        </form>
     </div>
 </body>
 <script src="js/signup.js"></script>
+
 </html>
