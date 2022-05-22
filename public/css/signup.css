@@ -117,11 +117,12 @@ body{
     background-image: url('https://c4.wallpaperflare.com/wallpaper/262/774/423/space-stars-nebula-tylercreatesworlds-wallpaper-preview.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 
 }
 
 .glass {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     width: 50vw;
     backdrop-filter: blur(10px);
     border-radius: 4px;
