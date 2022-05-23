@@ -140,10 +140,10 @@ body {
     /* background-color: black; */
     text-align: center;
     background-color: white;
-    display: none;
+    /* display: none; */
     z-index: 2;
     position: fixed;
-    top: 60px;
+    top: 58px;
     left: 0px;
     width: 100%;
 }
