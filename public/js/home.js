@@ -60,6 +60,45 @@ function sliding() {
 setInterval(sliding, 3000);
 
 
+let para_block = document.getElementById('para');
+let para = document.querySelector('#para p');
+
+console.log(para.clientWidth);
+
+// para.style.width = "" + para.clientWidth + "px";
+
+// para_block.style.width = "" + para.clientWidth + "px";
+
+setInterval(frame, 10);
+let width = para_block.clientWidth;
+let ow = width;
+
+para.style.width = "" + (width + 5) + "px";
+let opening = 0;
+function frame(){
+    if(width == 0){
+        setTimeout(() => {
+            opening = 1;
+        }, 1000);
+    }
+    else if(width == ow+5){
+        setTimeout(() => {
+            opening = 0;
+        }, 1000);
+    }
+    if(!opening && width>0){
+        width--;
+        para_block.style.width = "" + width + "px";
+        opening = 0;
+    }
+    else if(opening && width<=ow+5){
+        opening = 1;
+        width++;
+        para_block.style.width = "" + width + "px";
+    }
+}
+
+
 
 // ************************** items ************************
 
