@@ -211,6 +211,12 @@ body {
     padding: 0px 50px;
 }
 
+@media screen and (max-width: 588px) {
+    .details{
+        padding: 0px 10px;
+    }
+}
+
 .image{
     padding: 10px 10px;
     /* border: 2px solid red; */
