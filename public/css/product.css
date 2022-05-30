@@ -193,11 +193,12 @@ body {
 #left, #right{
     position: relative;
     /* z-index: -1; */
-    height: 50px;
+    height: 40px;
+    opacity: 0.5;
 }
 
 #left img{
-    width: 50px;
+    width: 40px;
     border-radius: 100px;
     transform: rotate(180deg);
     z-index: -1;
@@ -208,7 +209,7 @@ body {
 }
 
 #right img{
-    width: 50px;
+    width: 40px;
     border-radius: 100px;
     z-index: -1;
     background-color: white;
@@ -294,8 +295,8 @@ body {
 }
 
 #price{
-    color: blue;
-    font-size: 1.5rem;
+    color: red;
+    font-size: 1.3rem;
 }
 
 

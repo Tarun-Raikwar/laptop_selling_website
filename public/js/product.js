@@ -47,6 +47,19 @@ fetch("/product_data")
         left.style.top = "" + slider.clientHeight / 2 + "px";
         right.style.top = "" + slider.clientHeight / 2 + "px";
 
+        left.addEventListener('mouseover', ()=>{
+            left.style.opacity = "1";
+        })
+        left.addEventListener('mouseout', ()=>{
+            left.style.opacity = "0.5";
+        })
+        right.addEventListener('mouseover', ()=>{
+            right.style.opacity = "1";
+        })
+        right.addEventListener('mouseout', ()=>{
+            right.style.opacity = "0.5";
+        })
+
 
         left.addEventListener('click', () => {
             if(i==0){
