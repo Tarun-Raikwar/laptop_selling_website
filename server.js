@@ -117,7 +117,7 @@ app.get("/contact", function (req, res) {
 })
 
 
-app.get('/Admin', (req, res) => {
+app.get('/Admin_page', (req, res) => {
     res.sendFile(__dirname + "/Admin/Admin.html");
 })
 
@@ -148,6 +148,10 @@ app.get('/search', (req, res) => {
 
 app.get("/buy_now", (req, res)=>{
     res.sendFile(__dirname + "/home/index.html");
+})
+
+app.get('/Admin_access', (req, res)=>{
+    res.sendFile(__dirname + "/Admin/Admin_check.html");
 })
 
 // ******************************* web page endpoints ********************************
@@ -232,6 +236,17 @@ app.get("/product_data", function (req, res) {
 app.post("/product", function (req, res) {
     res.cookie("product", req.body);
     res.send(req.body);
+})
+
+app.post("/Admin_access", (req, res)=>{
+    console.log(req.body);
+    if(req.body.user_id == "Tarun" && req.body.password == "T@run22022003"){
+        res.send(true);
+        res.redirect("/Admin_page");
+    }
+    else{
+        res.send(false);
+    }
 })
 
 
