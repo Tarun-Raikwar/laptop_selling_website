@@ -5,48 +5,88 @@ let pass = document.getElementById("pass");
 let confirm_pass = document.getElementById("confirm_pass");
 
 
-function validation(){
+
+function validation() {
     let check = true;
-    if(name_cust.value == ""){
+    if (name_cust.value == "") {
         document.getElementById('name_span').innerHTML = "please fill your name";
         check = false;
     }
-    else{
+    else {
         document.getElementById('name_span').innerHTML = "";
     }
 
-    if(ph.value == ""){
+    if (ph.value == "") {
         document.getElementById('ph_span').innerHTML = "please fill your phone number";
         check = false;
     }
-    else{
+    else if (ph.value.length != 10) {
+        document.getElementById('ph_span').innerHTML = "Invalid phone number";
+        check = false;
+    }
+    else {
         document.getElementById('ph_span').innerHTML = "";
     }
 
-    if(email.value == ""){
+    if (email.value == "") {
         document.getElementById('email_span').innerHTML = "please fill your email";
         check = false;
     }
-    else{
+    else {
         document.getElementById('email_span').innerHTML = "";
     }
 
-    if(pass.value == ""){
+    if (pass.value == "") {
         document.getElementById('pass_span').innerHTML = "please create password";
         check = false;
     }
-    else{
+    else if (pass.value.length < 8) {
+        document.getElementById('pass_span').innerHTML = "Password should be of 8 digits";
+        check = false;
+    }
+    else {
         document.getElementById('pass_span').innerHTML = "";
     }
 
-    if(pass.value != confirm_pass.value){
+    if (pass.value != confirm_pass.value) {
         document.getElementById('confirm_pass_span').innerHTML = "password does not match";
         check = false;
     }
-    else{
+    else {
         document.getElementById('confirm_pass_span').innerHTML = "";
     }
-    if(check == false){
+    if (check == false) {
         return false;
     }
 }
+
+document.getElementById('submit').addEventListener('click', (e) => {
+
+    e.preventDefault();
+
+    fetch("/signup_data", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name_cust: name_cust.value,
+            PhNo: ph.value,
+            Email: email.value,
+            pass: pass.value
+        })
+    }).then(function (res) {
+        return res.json();
+    }).then(data => {
+        if(data == true){
+            name_cust.value = "";
+            ph.value = "";
+            email.value = "";
+            pass.value = "";
+            confirm_pass = "";
+        }
+    }).catch(err => {
+        console.log("cannot loggin");
+    })
+
+})

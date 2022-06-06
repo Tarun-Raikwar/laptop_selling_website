@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
 const { redirect } = require("statuses");
 const { json } = require("body-parser");
 const { reject, concatSeries } = require("async");
@@ -171,9 +172,12 @@ app.post("/query", (req, res) => {
     query.save();
     res.redirect('/contact');
 })
+// const securePassword = async(password) => {
+//     const passwordhash = await bcrypt.hash(password, 10);
+//     console.log(passwordhash);
+// }
 
 app.post("/login", async (req, res) => {
-    console.log(req.body);
     members.findOne({ Email: req.body.user_id }, function (err, data) {
         if (err) {
             console.log(err);
@@ -183,7 +187,7 @@ app.post("/login", async (req, res) => {
                 res.send(false);
             }
             else {
-                if (data.pass == req.body.password) {
+                if (bcrypt.compare(req.body.password, data.pass)) {
                     res.cookie("userdata", req.body);
                     res.send(data);
                 }
@@ -217,15 +221,18 @@ app.get("/logout", (req, res) => {
 })
 
 
+
 app.post('/signup_data', function (req, res) {
+    console.log(req.body);
+    let password = bcrypt.hashSync(req.body.pass, 10);
     const member = new members({
         name: req.body.name_cust,
         PhNo: req.body.Phone_number,
         Email: req.body.Email,
-        pass: req.body.password
+        pass: password
     })
     member.save();
-    res.redirect("/signup");
+    res.send(true);
 })
 
 
@@ -242,7 +249,7 @@ app.post("/Admin_access", (req, res)=>{
     console.log(req.body);
     if(req.body.user_id == "Tarun" && req.body.password == "T@run22022003"){
         res.send(true);
-        res.redirect("/Admin_page");
+        res.redirect(301, "/Admin_page");
     }
     else{
         res.send(false);
