@@ -83,7 +83,7 @@ document.getElementById('submit').addEventListener('click', (e) => {
             ph.value = "";
             email.value = "";
             pass.value = "";
-            confirm_pass = "";
+            confirm_pass.value = "";
         }
     }).catch(err => {
         console.log("cannot loggin");
