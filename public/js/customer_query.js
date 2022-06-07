@@ -5,7 +5,7 @@ fetch("/query")
     .then(data =>{
         console.log(data);
         for(let i=0; i<data.length; i++){
-            container.innerHTML += '<div class="query"><div class="overview"><p>' + data[i].date + '</p><p id>' + data[i].time + '</p><p>' + data[i].PhNo + '</p><p class="show">Show details</p></div><div class="detail"><p><Strong>Name : </Strong>' + data[i].name + '</p><p><Strong>Email : </Strong> ' + data[i].Email + '</p><p><Strong>Message : </Strong>' + data[i].message + '</p></div></div>'
+            container.innerHTML += '<div class="query"><div class="overview"><p class="name">' + data[i].name + '</p><p class="message">' + data[i].message.substr(0, 60)+"..." + '</p><p>' + data[i].date + '</p><p class="show">Show details</p></div><div class="detail"><p><Strong>Name : </Strong>' + data[i].name + '</p><p><Strong>Email : </Strong> ' + data[i].Email + '</p><p><Strong>Message : </Strong>' + data[i].message + '</p></div></div>'
 
         }
         let show = document.getElementsByClassName('show');

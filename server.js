@@ -163,7 +163,7 @@ app.post("/query", (req, res) => {
     // console.log(req.body);
     const query = new queries({
         date: "" + d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() + "",
-        time: "" + d.getHours() + ":" + d.getMinutes + "",
+        time: "" + d.getHours() + ":" + d.getMinutes() + "",
         name: req.body.name_cust,
         PhNo: req.body.phone,
         Email: req.body.email,
@@ -253,7 +253,8 @@ app.post("/product", function (req, res) {
 
 app.post("/Admin_access", (req, res)=>{
     if(req.body.user_id == "Tarun" && req.body.password == "T@run22022003"){
-        data = {"location":"https://mp-services-3.herokuapp.com/Admin_page"};
+        // data = {"location":"https://mp-services-3.herokuapp.com/Admin_page"};
+        data = {"location":"http://localhost:3000/Admin_page"};
         res.send(data);
     }
     else{
