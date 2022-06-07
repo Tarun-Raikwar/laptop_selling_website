@@ -253,7 +253,7 @@ app.post("/product", function (req, res) {
 
 app.post("/Admin_access", (req, res)=>{
     if(req.body.user_id == "Tarun" && req.body.password == "T@run22022003"){
-        data = {"location":"http://localhost:3000/Admin_page"};
+        data = {"location":"https://mp-services-3.herokuapp.com/Admin_access"};
         res.send(data);
     }
     else{
