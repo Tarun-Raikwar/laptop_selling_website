@@ -222,17 +222,23 @@ app.get("/logout", (req, res) => {
 
 
 
-app.post('/signup_data', function (req, res) {
-    console.log(req.body);
-    let password = bcrypt.hashSync(req.body.pass, 10);
-    const member = new members({
-        name: req.body.name_cust,
-        PhNo: req.body.Phone_number,
-        Email: req.body.Email,
-        pass: password
-    })
-    member.save();
-    res.send(true);
+app.post('/signup_data', async function (req, res) {
+
+    let isexist = await members.findOne({Email: req.body.Email}).exec();
+    if(isexist){
+        res.send(false);
+    }
+    else{
+        let password = bcrypt.hashSync(req.body.pass, 10);
+        const member = new members({
+            name: req.body.name_cust,
+            PhNo: req.body.PhNo,
+            Email: req.body.Email,
+            pass: password
+        })
+        member.save();
+        res.send(true);
+    }
 })
 
 
@@ -246,10 +252,9 @@ app.post("/product", function (req, res) {
 })
 
 app.post("/Admin_access", (req, res)=>{
-    console.log(req.body);
     if(req.body.user_id == "Tarun" && req.body.password == "T@run22022003"){
-        res.send(true);
-        res.redirect(301, "/Admin_page");
+        data = {"location":"http://localhost:3000/Admin_page"};
+        res.send(data);
     }
     else{
         res.send(false);

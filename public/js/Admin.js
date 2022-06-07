@@ -1,7 +1,7 @@
 let submit_button = document.getElementById('submit');
 let submit_display = document.getElementById('submited');
-let add = document.getElementById('add');
-let upload_file = document.getElementById('upload_file');
+// let add = document.getElementById('add');
+// let upload_file = document.getElementById('upload_file');
 
 // submit_button.addEventListener('mouseover', ()=>{
 //     console.log('tarun');
@@ -13,11 +13,11 @@ let upload_file = document.getElementById('upload_file');
 //     }, 5000);
 // })
 
-let text = upload_file.innerHTML;
+// let text = upload_file.innerHTML;
 
-add.addEventListener('click', ()=>{
-    upload_file.innerHTML += text;
-})
+// add.addEventListener('click', ()=>{
+//     upload_file.innerHTML += text;
+// })
 
 
 

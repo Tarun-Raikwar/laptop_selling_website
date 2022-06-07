@@ -6,7 +6,7 @@ let confirm_pass = document.getElementById("confirm_pass");
 
 
 
-function validation() {
+async function validation() {
     let check = true;
     if (name_cust.value == "") {
         document.getElementById('name_span').innerHTML = "please fill your name";
@@ -55,38 +55,48 @@ function validation() {
     else {
         document.getElementById('confirm_pass_span').innerHTML = "";
     }
+
     if (check == false) {
         return false;
     }
+
+    return true;
 }
 
-document.getElementById('submit').addEventListener('click', (e) => {
+document.getElementById('submit').addEventListener('click', async(e) => {
 
     e.preventDefault();
+    let respose = await validation();
 
-    fetch("/signup_data", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            name_cust: name_cust.value,
-            PhNo: ph.value,
-            Email: email.value,
-            pass: pass.value
+    if(respose == true){
+        fetch("/signup_data", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name_cust: name_cust.value,
+                PhNo: ph.value,
+                Email: email.value,
+                pass: pass.value
+            })
+        }).then(function (res) {
+            return res.json();
+        }).then(data => {
+            console.log(data);
+            if(data == true){
+                name_cust.value = "";
+                ph.value = "";
+                email.value = "";
+                pass.value = "";
+                confirm_pass.value = "";
+            }
+            else{
+                email_span.innerHTML = "Email already exist"; 
+            }
+        }).catch(err => {
+            console.log("REGISTRATION FAILED");
         })
-    }).then(function (res) {
-        return res.json();
-    }).then(data => {
-        if(data == true){
-            name_cust.value = "";
-            ph.value = "";
-            email.value = "";
-            pass.value = "";
-            confirm_pass.value = "";
-        }
-    }).catch(err => {
-        console.log("cannot loggin");
-    })
+    }
 
 })
