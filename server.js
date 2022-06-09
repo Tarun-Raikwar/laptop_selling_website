@@ -178,6 +178,7 @@ app.post("/query", (req, res) => {
 // }
 
 app.post("/login", async (req, res) => {
+    console.log(req.body);
     members.findOne({ Email: req.body.user_id }, function (err, data) {
         if (err) {
             console.log(err);
@@ -187,7 +188,11 @@ app.post("/login", async (req, res) => {
                 res.send(false);
             }
             else {
-                if (bcrypt.compare(req.body.password, data.pass)) {
+                console.log(data);
+                let match = bcrypt.compareSync(req.body.password, data.pass);
+                console.log(match);
+                if (match) {
+                    console.log("login suuceessfull");
                     res.cookie("userdata", req.body);
                     res.send(data);
                 }
@@ -255,7 +260,7 @@ app.post("/Admin_access", (req, res)=>{
     if(req.body.user_id == "Tarun" && req.body.password == "T@run22022003"){
         data = {"location":"https://mp-services-3.herokuapp.com/Admin_page"};
         // data = {"location":"http://localhost:3000/Admin_page"};
-        res.send(data);
+        res.sendFile(__dirname + "/Admin/Admin.html");
     }
     else{
         res.send(false);

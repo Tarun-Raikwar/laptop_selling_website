@@ -18,31 +18,31 @@
 </body>
 
 <script>
-    let submit = document.getElementById('submit');
-    submit.addEventListener('click', (e)=>{
-        console.log("tarun");
-        e.preventDefault();
-        fetch('/Admin_access', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body : JSON.stringify({
-                user_id: document.getElementById('user_id').value,
-                password: document.getElementById('pass').value
-            })
-        })
-        .then((res) =>{ return res.json()})
-        .then((data) =>{
-            if(data == false){
-                // alert("invalid data");
-                document.getElementById('res').style.display = "block";
-            }
-            else{
-                window.location = data.location;
-            }
-        })
-    })
+    // let submit = document.getElementById('submit');
+    // submit.addEventListener('click', (e)=>{
+    //     console.log("tarun");
+    //     e.preventDefault();
+    //     fetch('/Admin_access', {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body : JSON.stringify({
+    //             user_id: document.getElementById('user_id').value,
+    //             password: document.getElementById('pass').value
+    //         })
+    //     })
+    //     .then((res) =>{ return res.json()})
+    //     .then((data) =>{
+    //         if(data == false){
+    //             // alert("invalid data");
+    //             document.getElementById('res').style.display = "block";
+    //         }
+    //         else{
+    //             window.location = data.location;
+    //         }
+    //     })
+    // })
 </script>
 
 </html>
