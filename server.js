@@ -41,7 +41,7 @@ app.use(express.json());
 
 // ******************* database *****************************
 
-let db = "mongodb+srv://tarun:tarunkumar@cluster0.55ykm.mongodb.net/?retryWrites=true&w=majority";
+let db = mongodbURI;
 
 
 mongoose.connect(db).then(()=>{
@@ -270,10 +270,10 @@ app.post("/Admin_access", (req, res)=>{
 
 // ******************** drvie ***********************
 
-const CLIENT_ID = "461770036166-fj3mlrvmmiao1frc29552k63nnn3k50j.apps.googleusercontent.com";
-const CLIENT_SECRET = "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";
-const REDIRECT_URI = "https://developers.google.com/oauthplayground";
-const REFRESH_TOKEN = "1//0480uiIcS-mOLCgYIARAAGAQSNwF-L9IrPuMZAfIMscDYaOWI_SVyOUWIoGAUqi0oQy7XpCyF4YSHaKuI3fnoJoBcuu-Hmr2Tkog";
+const CLIENT_ID = CLIENTID;
+const CLIENT_SECRET = CLIENTSECRET";
+const REDIRECT_URI = REDIRECTURI;
+const REFRESH_TOKEN = REFRESHTOKEN;
 
 const oauth2Client = new google.auth.OAuth2(
     CLIENT_ID,
