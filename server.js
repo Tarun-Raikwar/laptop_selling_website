@@ -385,7 +385,7 @@ app.post('/upload_product', multipleUpload, async function (req, res) {
     //     recursive: true
     // })
     laptop.save();
-    res.redirect('/Admin');
+    res.redirect('/Admin_page');
 })
 
 
