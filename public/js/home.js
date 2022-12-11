@@ -175,7 +175,6 @@ for(let i=0; i<login_button.length; i++){
     })
 }
 
-
 login_form_container.addEventListener('click', ()=>{
     login_form.style.display = "none";
     login_form_container.style.display = "none";
